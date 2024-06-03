@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.person {
+    width: 320px;
+    height: 830px;
+    background-image: url(./img/css.png);
+    position: relative;
+    background-repeat: no-repeat;
+    cursor: move;
+}
+
+.person .inside {
+    width: 100%;
+    height: 280px;
+    background-image: url(./img/html.png);
+    background-position: center;
+    border: 5px solid gray;
+    border-radius: 0.3em;
+    position: absolute;
+    left: -12px;
+    background-attachment: fixed;
+    pointer-events: none;
+}
+
+.selector {
+    position: absolute;
+    width: 11em;
+    top: calc(50% - 8em / 2);
+    left: 3em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+}
+
+.selector input {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.selector label {
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.selector input:checked + label{
+    color: dodgerblue;
+}
